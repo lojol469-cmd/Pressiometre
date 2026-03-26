@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Environnement Python local (binaires, packages — garder seulement requirements.txt)
+environment/Lib/
+environment/Scripts/
+environment/share/
+environment/etc/
+environment/*.exe
+environment/*.dll
+environment/*.zip
+environment/*.pth
+environment/*.whl
+
+# Modèle IA KIBALI (fichiers très lourds)
+kibali-final-merged/*.safetensors
+kibali-final-merged/*.index.json
+kibali-final-merged/*.index.1.json
+kibali-final-merged/.git/
+
+# Rapports PDF générés
+*.pdf
+
+# Fichiers temporaires
+*.tmp
+*.log
+*.bak
+~$*
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# VSCode
+.vscode/
+.history/
+
+# Données sensibles / uploads
+uploads/
+output/

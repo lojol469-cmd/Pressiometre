@@ -1,0 +1,25 @@
+{
+  "pythonPath": "./environment/python.exe",
+  "venvPath": ".",
+  "venv": "environment",
+  "typeCheckingMode": "basic",
+  "reportMissingImports": false,
+  "reportMissingModuleSource": false,
+  "reportMissingTypeStubs": false,
+  "reportUnknownVariableType": false,
+  "reportUnknownMemberType": false,
+  "reportUnknownArgumentType": false,
+  "reportUnknownParameterType": false,
+  "reportOptionalMemberAccess": false,
+  "reportGeneralTypeIssues": false,
+  "reportArgumentType": false,
+  "ignore": [
+    "tools/web.py"
+  ],
+  "exclude": [
+    "environment/**",
+    "**/node_modules",
+    "**/__pycache__",
+    "**/.*"
+  ]
+}
