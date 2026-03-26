@@ -192,6 +192,72 @@ Logiciel développé avec Python 3.11, FastAPI, PyQt6, KIBALI IA
 
 ---
 
-## Licence
+## Licences
 
-Propriétaire — SETRAF Gabon. Tous droits réservés.
+### Logiciel PressiomètreIA — Licence propriétaire SETRAF
+
+Copyright © 2024-2026 **SETRAF — Bureau d'études Géotechniques**, Port-Gentil, Gabon.  
+Tous droits réservés.
+
+Le code source, les algorithmes, les rapports générés et l'interface graphique de ce logiciel sont la propriété exclusive de SETRAF.
+
+| Usage | Autorisé |
+|-------|----------|
+| Utilisation interne par SETRAF et ses clients | ✅ |
+| Utilisation commerciale par des tiers | ❌ Sans accord écrit de SETRAF |
+| Redistribution du code source | ❌ |
+| Modification et dérivés | ❌ Sans accord écrit de SETRAF |
+| Usage personnel / recherche académique | ✅ Avec mention de la source |
+
+Pour toute demande de licence commerciale ou de partenariat, contacter SETRAF directement.
+
+---
+
+### Modèle IA KIBALI — Apache License 2.0
+
+Le modèle **KIBALI** (`BelikanM/kibali-final-merged`) est distribué sous licence **Apache License 2.0**.
+
+- **Modèle de base** : `mistralai/Mistral-7B-Instruct-v0.2` — Apache 2.0
+- **Adaptateurs LoRA** et modèle fusionné : Apache 2.0
+
+```
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+```
+
+| Usage du modèle KIBALI | Autorisé |
+|------------------------|----------|
+| Utilisation commerciale | ✅ |
+| Modification et fine-tuning | ✅ |
+| Redistribution | ✅ avec mention de la licence Apache 2.0 |
+| Usage privé | ✅ |
+| Brevet | ❌ (clause Apache 2.0 §3) |
+
+> **Note** : La licence Apache 2.0 du modèle s'applique uniquement aux poids du modèle KIBALI.  
+> Elle ne transfère aucun droit sur le logiciel PressiomètreIA qui reste propriété de SETRAF.
+
+---
+
+### Dépendances tierces
+
+Les bibliothèques Python utilisées sont soumises à leurs propres licences :
+
+| Bibliothèque | Licence |
+|---|---|
+| PyQt6 | GPL v3 / Licence commerciale Riverbank |
+| FastAPI | MIT |
+| PyTorch | BSD-3 |
+| Transformers (HuggingFace) | Apache 2.0 |
+| BitsAndBytes | MIT |
+| ReportLab | BSD |
+| NumPy / SciPy / Matplotlib | BSD |
+| Plotly | MIT |
+
+> L'utilisation de **PyQt6** sous GPL v3 implique que tout logiciel lié doit également être distribué sous GPL v3, sauf acquisition d'une licence commerciale auprès de Riverbank Computing. SETRAF opère sous licence commerciale PyQt6.
