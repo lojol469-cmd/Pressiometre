@@ -131,6 +131,8 @@ class SectionPoint(BaseModel):
     depth_m: float     # profondeur
     Em_MPa: Optional[float]
     Pl_MPa: Optional[float]
+    Pf_MPa: Optional[float] = None
+    qualite: Optional[str] = None
     sol_type: str
     sol_color: str
     sondage: str

@@ -107,8 +107,9 @@ def compute_params(cleaned: CleanedEssai, probe_v0_cm3: float = PROBE_V0_DEFAULT
         # Si pas trouvé, utiliser la dérivée du creep
         if pf is None and len(p) >= 5:
             try:
-                d_creep = np.gradient(creep, p)
-                dd_creep = np.gradient(d_creep, p)
+                with np.errstate(divide='ignore', invalid='ignore'):
+                    d_creep = np.gradient(creep, p)
+                    dd_creep = np.gradient(d_creep, p)
                 # Point de maximum de d(creep)
                 idx_pf = int(np.argmax(d_creep[1:]) + 1)
                 if 1 <= idx_pf < len(p) - 1:
@@ -296,6 +297,8 @@ def build_section(params_list, boreholes: list, n_interp: int = 50):
                 depth_m=p.depth_m or 0.0,
                 Em_MPa=p.Em_MPa,
                 Pl_MPa=p.Pl_MPa,
+                Pf_MPa=p.Pf_MPa,
+                qualite=p.qualite,
                 sol_type=p.sol_type,
                 sol_color=p.sol_color,
                 sondage=sond,
