@@ -197,11 +197,9 @@ def clean_essai(req: CleanRequest) -> CleanedEssai:
     # ─── Étape 8 : volume moyen et ratio creep ──────────────────────────────
     vm_arr     = np.nanmean(np.stack([v30_corr, v60_corr], axis=1), axis=1)
     creep_abs  = v60_corr - v30_corr
-    creep_ratio = np.where(
-        (v30_corr > 1) & ~np.isnan(v30_corr) & ~np.isnan(v60_corr),
-        v60_corr / v30_corr,
-        np.nan
-    )
+    _creep_mask = (v30_corr > 1) & ~np.isnan(v30_corr) & ~np.isnan(v60_corr)
+    creep_ratio = np.full(len(v30_corr), np.nan)
+    np.divide(v60_corr, v30_corr, out=creep_ratio, where=_creep_mask)
 
     # ─── Étape 9 : détection anomalies sur volumes ───────────────────────────
     anomalie_flags = [False] * len(raw_points)
