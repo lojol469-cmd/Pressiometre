@@ -337,7 +337,7 @@ def build_cloud3d(params_list, boreholes: list, grid_res: int = 20):
         ys.append(by)
         points_3d.append({
             "x": bx, "y": by, "z": -(p.depth_m),
-            "Em": p.Em_MPa, "Pl": p.Pl_MPa,
+            "Em": p.Em_MPa, "Pl": p.Pl_MPa, "Pf": p.Pf_MPa,
             "sol_type": p.sol_type,
             "sol_color": p.sol_color,
             "sondage": sond,

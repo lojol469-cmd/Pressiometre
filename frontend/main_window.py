@@ -723,7 +723,7 @@ class MainWindow(QMainWindow):
         req = Cloud3DRequest(params_list=params_list, boreholes=boreholes)
         try:
             self.cloud3d_data = self.client.build_cloud3d(req)
-            self.tab_cloud3d.refresh(self.cloud3d_data)
+            self.tab_cloud3d.refresh(self.cloud3d_data, self.cleaned_map, self.params_map)
         except Exception as e:
             self.status.showMessage(f"⚠ Nuage 3D non calculé : {e}")
 
